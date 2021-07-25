@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/pages/Estoque-Api.tsx
+/src/styles/auth.scss
+/src/styles/button.scss
+/src/styles/style.scss

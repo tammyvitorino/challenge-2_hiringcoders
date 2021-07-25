@@ -1,4 +1,3 @@
-// import { useContext } from 'react'
 import { useHistory } from 'react-router'
 
 import logoImage from '../assets/images/logo.png'

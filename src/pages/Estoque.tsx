@@ -1,45 +1,24 @@
-import productImage from '../assets/images/sylvie.png'
-import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
-
+import seriesImageMarvel from '../assets/images/marvel_destaque.png'
+import seriesImageLoki from '../assets/images/loki_destaque.png'
+import seriesImageDC from '../assets/images/dc_destaque.png'
+import seriesImageHarryPotter from '../assets/images/hp_destaque.png'
 
 
 export function Estoque(){
-
-  const [product, setProduct] = useState('')
-  const [price, setPrice] = useState('')
-  const [stock, setStock] = useState('')
- 
-  function handleProduct() {
-    localStorage.setItem(`productName${product}`, product);
-    localStorage.setItem('productPrice', price);
-    localStorage.setItem('productStock', stock);
- }
-
-
-
+  
  return (
- <div id="home-login">
+
   <main>
-   <div className="main-content">
-   <img src={productImage} alt="Logo 42 Store" className="logo-main"/>  
-   <form id="form-user" >
-        <div className="">
-          <input placeholder="Nome do Produto" className="userInput" value={product} onChange={e => setProduct(e.target.value)}/>
-        </div>
-        <div className="">
-          <input placeholder="Preço" value={price} onChange={e => setPrice(e.target.value)}/>
-        </div>
-        <div className="">
-          <input placeholder="Qtde em estoque" value={stock} onChange={e => setStock(e.target.value)} />
-        </div>
-        <div className="">
-        <input type="reset" /><input type="submit" onClick={handleProduct} />
-        </div>
-      </form>
-   
-   </div>
+  <h1>Selecione a linha que deseja atualizar</h1>
+  <section className="section" id="product-series">
+        <div className="item"><Link to='/logged/estoquemarvel'><img src={seriesImageMarvel} alt="Banner Destaque Marvel com foto do Funko do Thor" /></Link></div>
+        <div className="item">
+        <Link to='/logged/estoqueloki'><img src={seriesImageLoki} alt="Banner destaque Loki com foto dos Lokis"/></Link>
+        <Link to='/logged/estoqueharrypotter'><img src={seriesImageHarryPotter} alt="Banner destaque Harry Potter com os funkos num fundo do castelo"/></Link></div>
+        <div className="item"><Link to='/logged/estoquedc'><img src={seriesImageDC} alt="Banner destaque DC comic com foto do funko Flash"/></Link></div>
+  </section>
   </main>
- </div>
 )
 }

@@ -5,20 +5,27 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import {Home} from './pages/Home';
 import {Cadastro} from './pages/Cadastro';
 import {Estoque} from './pages/Estoque';
+import {EstoqueLoki} from './pages/EstoqueLoki';
+import {EstoqueMarvel} from './pages/EstoqueMarvel';
+import {EstoqueDC} from './pages/EstoqueDC';
+import {EstoqueHarryPotter} from './pages/EstoqueHarryPotter';
 
-export const TestContext = createContext({} as any);
+export const PagesContext = createContext({} as any);
 
-function App() {
-  const [value, setValue] = useState('Teste');
+const App: React.FC = () => {
+  const [value, setValue] = useState('');
   
   return (
     <BrowserRouter>
-      <TestContext.Provider value={{value, setValue} }>
+      <PagesContext.Provider value={{value, setValue} }>
         <Route path="/" exact component={Home} />
         <Route path="/logged/cadastro" component={Cadastro} />
-        <Route path="/logged/estoque" component={Estoque} />
-         handleSubscription()
-      </TestContext.Provider>
+        <Route path="/logged/estoque" component={Estoque} />        
+        <Route path="/logged/estoqueloki" component={EstoqueLoki} />        
+        <Route path="/logged/estoquemarvel" component={EstoqueMarvel} />
+        <Route path="/logged/estoquedc" component={EstoqueDC} />
+        <Route path="/logged/estoqueharrypotter" component={EstoqueHarryPotter} />
+      </PagesContext.Provider>
     </BrowserRouter>
   );
 }
