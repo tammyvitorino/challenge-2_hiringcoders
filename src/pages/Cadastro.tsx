@@ -1,5 +1,5 @@
-// import axios from 'axios'
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 export function Cadastro(){
 
@@ -21,34 +21,24 @@ export function Cadastro(){
  return (   
 
   <main>
-  <h1>Cadastro de Usuários</h1>
+    <h1>Cadastro de Usuários</h1>
   
     <section className="section" id="user-subscribe">
-    <div className="main-content">
-    <form id="form-user" >
-          <div className="">
-            <input placeholder="Seu nome" className="userInput" value={user} onChange={e => setUsuario(e.target.value)} required />
-          </div>
-          <div className="">
-            <input type="email" placeholder="Seu email" value={email} onChange={e => setEmail(e.target.value)} required />
-          </div>
-          <div className="">
-            <input type="password" placeholder="Escolha uma senha" value={password} onChange={e => setPassword(e.target.value)} required/>
-          </div>
-          <div className="">
-            <input placeholder="Logradouro e Número" value={adressStreet} onChange={e => setAdressStreet(e.target.value)} required />
-          </div>
-          <div className="">
-            <input placeholder="Complemento" value={adressAdditional} onChange={e => setAdressAdditional(e.target.value)}  />
-          </div>
-          <div className="">
-            <input placeholder="Cidade / UF" value={adressCity} onChange={e => setAdressCity(e.target.value)} required />
-          </div>
-          <div className="">
+      <div className="main-content">
+        <form id="form-user" >
+          <input placeholder="Seu nome" className="userInput" value={user} onChange={e => setUsuario(e.target.value)} required />
+          <input type="email" placeholder="Seu email" value={email} onChange={e => setEmail(e.target.value)} required />
+          <input type="password" placeholder="Escolha uma senha" value={password} onChange={e => setPassword(e.target.value)} required/>
+          <input placeholder="Logradouro e Número" value={adressStreet} onChange={e => setAdressStreet(e.target.value)} required />
+          <input placeholder="Complemento" value={adressAdditional} onChange={e => setAdressAdditional(e.target.value)}  />
+          <input placeholder="Cidade / UF" value={adressCity} onChange={e => setAdressCity(e.target.value)} required />
           <input type="reset" /><input type="submit" onClick={handleCadastro} />
-          </div>
-        </form>
-    </div>
+        </form>  
+      </div> 
+      <div className="grid">
+        <div className="item left"><h3><Link to="/"> &lt;&lt; Voltar para Tela Inicial</Link></h3></div>
+        <div className="item right"><h3><Link to="/logged/estoque"> Gerenciar Estoque &gt;&gt;</Link></h3></div>
+      </div>
     </section>
   </main>
 )

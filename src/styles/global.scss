@@ -27,6 +27,15 @@ h2 {
   margin: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--darkgray);
+}
+
+a:hover {
+  color: var(--green42);
+}
+
 img {
   width: 100%;
   height: auto;
@@ -90,6 +99,34 @@ input {
   padding: 1rem;
 }
 
+.section {
+  padding: 0rem 1rem;
+}
+
+.grid {
+  grid-gap: 1rem;
+  display: flex;
+}
+
+form {
+  padding: 1rem;
+}
+
+.item {
+  flex: 1 1;
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 #home-login {
   display: flex;
   align-items: stretch;
@@ -143,29 +180,11 @@ input {
   }
 }
 
-form {
-  padding: 1rem;
-}
-
-.item {
-  flex: 1 1;
-  margin-top: 1rem;
-  margin: 1rem;
-  width: 100%;
-  text-align: center;
-}
-
 #product-list {
   margin: 0rem 5rem;
-  display: flex;
 
   img {
     width: 80%;
-  }
-
-  .grid {
-    grid-gap: 1rem;
-    gap: 1rem;
   }
 
   .product-name {
@@ -183,7 +202,6 @@ form {
   #form-user {
     width: 100%;
     align-items: stretch;
-    height: 100vh;
   }
 }
 
@@ -222,8 +240,6 @@ form {
   }
 
   .item {
-    width: 100%;
-    text-align: center;
     margin: 5px;
   }
 }

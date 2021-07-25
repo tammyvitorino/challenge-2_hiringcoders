@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { createContext } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+
 import {Home} from './pages/Home';
 import {Cadastro} from './pages/Cadastro';
 import {Estoque} from './pages/Estoque';
